@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Country } from "../types";
 
 type CountryProfileProps = {
@@ -27,10 +28,13 @@ export default function CountryProfile({
         </div>
 
         {country.flag && (
-          <img
+          <Image
             src={country.flag}
             alt={`${country.name} flag`}
+            width={112}
+            height={72}
             className="h-auto w-28 rounded-2xl border border-slate-200 shadow-sm"
+            unoptimized
           />
         )}
       </div>

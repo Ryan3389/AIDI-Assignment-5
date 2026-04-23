@@ -9,7 +9,7 @@ export async function GET() {
     const countries = JSON.parse(fileData);
 
     return NextResponse.json(countries);
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { error: "Failed to load country data" },
       { status: 500 }
